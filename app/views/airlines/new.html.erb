@@ -1,0 +1,16 @@
+<h1>New Airline</h1>
+<%= form_with model:Airline.new do | form | %>
+    <div>
+        <label>Name:</label>
+        <%= form.text_field :name %>
+    </div>
+    <div>
+        <label>Description:</label>
+        <%= form.text_field :description %>
+    </div>
+    <div>
+        <label>Number of Planes:</label>
+        <%= form.number_field :number_of_planes %>
+    </div>
+    <%= form.submit %>
+<% end %>

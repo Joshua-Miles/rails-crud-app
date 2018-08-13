@@ -1,0 +1,10 @@
+<%= button_link "Create New Airline", new_airline_path %>
+<table>
+    <% @airlines.each do | airline | %>
+        <tr>
+            <td><%= link_to airline.name, airline %></td>
+            <td><%= button_link 'Edit', edit_airline_path(airline)%></td>
+            <td><%= button_link 'Delete', airline_path(airline), method:'delete'%></td>
+        </tr>
+    <% end %>
+</table>
