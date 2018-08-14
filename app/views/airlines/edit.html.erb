@@ -1,5 +1,5 @@
 <h1><%= selected_airline.name %></h1>
-<%= form_with model:selected_airline do | form | %>
+<%= form_with model: selected_airline do | form | %>
     <div>
         <label>Name:</label>
         <%= form.text_field :name %>
@@ -11,6 +11,10 @@
     <div>
         <label>Number of Planes:</label>
         <%= form.number_field :number_of_planes %>
+    </div>
+    <div>
+        <label>Active:</label>
+        <%= form.check_box :active %>
     </div>
     <%= form.submit %>
 <% end %>

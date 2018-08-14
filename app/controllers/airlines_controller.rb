@@ -1,6 +1,5 @@
 class AirlinesController < ApplicationController
-
-    helper_method :selected_airline, :button_link
+    helper_method :selected_airline
 
     def index
         @airlines = Airline.all
@@ -38,13 +37,9 @@ class AirlinesController < ApplicationController
         Airline.find(params[:id])
     end
 
-    def button_link(text, url)
-        button_to(text, url, method:'get')
-    end
-
     private
     def airline_params
-        params.require(:airline).permit(:name, :description, :number_of_planes)
+        params.require(:airline).permit(:name, :description, :number_of_planes, :active)
     end
 
 end

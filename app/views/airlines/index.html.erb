@@ -4,7 +4,7 @@
         <tr>
             <td><%= link_to airline.name, airline %></td>
             <td><%= button_link 'Edit', edit_airline_path(airline)%></td>
-            <td><%= button_link 'Delete', airline_path(airline), method:'delete'%></td>
+            <td><%= button_to 'Delete', airline_path(airline), method:'delete'%></td>
         </tr>
     <% end %>
 </table>
